@@ -1,7 +1,8 @@
 // src/app/formBuilderSlice.ts
 
-import { createSlice, PayloadAction } from '@reduxjs/toolkit';
-import { FormField, FormSchema } from '../types';
+import { createSlice } from '@reduxjs/toolkit';
+import type { PayloadAction } from '@reduxjs/toolkit';
+import type { FormField, FormSchema } from '../types';
 import { nanoid } from 'nanoid';
 import { addForm } from '../utils/localStorage';
 

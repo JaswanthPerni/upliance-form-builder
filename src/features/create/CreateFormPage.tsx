@@ -2,7 +2,7 @@
 
 import { useSelector, useDispatch } from 'react-redux';
 import { useNavigate } from 'react-router-dom';
-import { RootState } from '../../app/store';
+import type { RootState } from '../../app/store';
 import {
   addField,
   setFormName,
@@ -22,7 +22,7 @@ import {
   InputLabel,
 } from '@mui/material';
 import { useState } from 'react';
-import { FieldType } from '../../types';
+import type { FieldType } from '../../types';
 
 export const CreateFormPage = () => {
   const dispatch = useDispatch();

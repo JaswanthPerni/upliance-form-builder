@@ -3,7 +3,7 @@
 import { useEffect, useState } from 'react';
 import { useParams } from 'react-router-dom';
 import { getFormById } from '../../utils/localStorage';
-import { FormSchema, FormField } from '../../types';
+import type { FormSchema, FormField } from '../../types';
 import { Box, Button, Paper, TextField, Typography, Checkbox, FormControlLabel } from '@mui/material';
 import { DatePicker } from '@mui/x-date-pickers/DatePicker';
 

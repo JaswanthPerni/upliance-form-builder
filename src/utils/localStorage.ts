@@ -1,6 +1,6 @@
 // src/utils/localStorage.ts
 
-import { FormSchema } from '../types';
+import type { FormSchema } from '../types';
 
 const FORMS_KEY = 'savedForms';
 

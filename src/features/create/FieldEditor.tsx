@@ -1,5 +1,5 @@
 // src/features/create/FieldEditor.tsx
-import { FormField } from "../../types";
+import type { FormField } from "../../types";
 import { useDispatch } from "react-redux";
 import { removeField, updateField } from "../../app/formBuilderSlice";
 import {

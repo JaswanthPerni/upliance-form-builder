@@ -13,7 +13,7 @@ import {
 } from '@mui/material';
 import { useNavigate } from 'react-router-dom';
 import { getSavedForms } from '../../utils/localStorage';
-import { FormSchema } from '../../types';
+import type { FormSchema } from '../../types';
 import VisibilityIcon from '@mui/icons-material/Visibility';
 
 export const MyFormsPage = () => {
