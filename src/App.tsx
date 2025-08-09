@@ -5,24 +5,25 @@ import Header from './components/Header';
 import { MyFormsPage } from './features/myforms/MyFormsPage';
 import { CreateFormPage } from './features/create/CreateFormPage';
 import { PreviewFormPage } from './features/preview/PreviewFormPage';
-import { Container, Box } from '@mui/material'; // Make sure Box is imported
+import { Container, Box } from '@mui/material';
 
 function App() {
   return (
-    <>
+    // This outer Box makes our app a flex column that fills the screen's height
+    <Box sx={{ display: 'flex', flexDirection: 'column', minHeight: '100vh' }}>
       <Header />
-      {/* --- NEW CENTERING BOX --- */}
-      {/* This Box acts as the main content area for all pages */}
+
+      {/* This "main" Box is now the flexible part that will center everything */}
       <Box
-        component="main" // Using a semantic HTML tag is good practice
+        component="main"
         sx={{
-          display: 'flex',          // Enables Flexbox layout
-          justifyContent: 'center', // Centers the content horizontally
-          alignItems: 'flex-start',   // Aligns content to the top
-          py: 4,                      // Adds vertical padding (4 * 8px = 32px)
+          display: 'flex',
+          flexGrow: 1,                // CRITICAL: Allows this box to take up all available vertical space
+          justifyContent: 'center', // Centers horizontally
+          alignItems: 'center',     // CRITICAL: Centers vertically
         }}
       >
-        <Container maxWidth="lg"> {/* The Container still controls the max width of the content */}
+        <Container maxWidth="lg">
           <Routes>
             <Route path="/" element={<Navigate to="/myforms" />} />
             <Route path="/myforms" element={<MyFormsPage />} />
@@ -31,7 +32,7 @@ function App() {
           </Routes>
         </Container>
       </Box>
-    </>
+    </Box>
   );
 }
 
