@@ -23,3 +23,10 @@ export const getFormById = (formId: string): FormSchema | undefined => {
   const forms = getSavedForms();
   return forms.find(form => form.id === formId);
 };
+
+// --- NEW FUNCTION TO ADD ---
+export const deleteForm = (formId: string) => {
+  const forms = getSavedForms();
+  const updatedForms = forms.filter(form => form.id !== formId);
+  saveForms(updatedForms);
+};
