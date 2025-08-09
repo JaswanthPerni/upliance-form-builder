@@ -9,21 +9,16 @@ import { Container, Box } from '@mui/material';
 
 function App() {
   return (
-    // This outer Box makes our app a flex column that fills the screen's height
-    <Box sx={{ display: 'flex', flexDirection: 'column', minHeight: '100vh' }}>
+    <Box>
       <Header />
 
-      {/* This "main" Box is now the flexible part that will center everything */}
-      <Box
-        component="main"
-        sx={{
-          display: 'flex',
-          flexGrow: 1,                // CRITICAL: Allows this box to take up all available vertical space
-          justifyContent: 'center', // Centers horizontally
-          alignItems: 'center',     // CRITICAL: Centers vertically
-        }}
-      >
-        <Container maxWidth="lg">
+      <Box component="main" sx={{ py: 4 }}>
+        {/*
+          By setting maxWidth={false}, we remove the width limit.
+          The Container now takes up the full width of the screen,
+          while still providing consistent horizontal padding on the sides.
+        */}
+        <Container maxWidth={false}>
           <Routes>
             <Route path="/" element={<Navigate to="/myforms" />} />
             <Route path="/myforms" element={<MyFormsPage />} />
