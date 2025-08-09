@@ -13,11 +13,6 @@ function App() {
       <Header />
 
       <Box component="main" sx={{ py: 4 }}>
-        {/*
-          By setting maxWidth={false}, we remove the width limit.
-          The Container now takes up the full width of the screen,
-          while still providing consistent horizontal padding on the sides.
-        */}
         <Container maxWidth={false}>
           <Routes>
             <Route path="/" element={<Navigate to="/myforms" />} />
